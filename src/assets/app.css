@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header */
+
+.page-header {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.header__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #552fbc;
+    margin: 0;
+}
+
+.header__nav {
+    list-style: none;
+    padding-left: 0;
+}
+
+.header__link {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 26px;
+    color: #000000;
+}
+
+.header__link:hover,
+.header__link:active {
+    color: #FAAD3D;
+}
+
+/* Constructor */
+
+.constructor-page {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 30px;
+    margin-right: 40px;
+}
+
+.form-constructor {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 30px;
+}
+
+.form-btn {
+    justify-self: center;
+}
+
+.form-elem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__group__text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 26px;
+    color: #000000;
+}
+
+.form__group__input {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 26px;
+    color: #000000;
+    margin-left: 20px;
+}
+
+.constructor-btn {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.list__link {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 26px;
+    color: #000000;
+}
+
+.list__link:hover,
+.list__link:active {
+    color: #FAAD3D;
+}
