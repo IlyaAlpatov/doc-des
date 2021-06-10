@@ -1,23 +1,26 @@
 <template>
   <div id="app">
     <headerPage/>
-    <constructorPage/>
+    <keep-alive>
+      <router-view/>
+    </keep-alive>
+    
   </div>
 </template>
 
 <script>
-import headerPage from './components/headerPage.vue'
-import constructorPage from './components/constructorPage.vue'
+import headerPage from './views/headerPage.vue'
+import store from './store'
+
 
 export default {
   name: 'App',
+  store,
   components: {
     headerPage,
-    constructorPage,
-  }
+  },
 }
 </script>
 
 <style>
-
-</style>
+</style> 

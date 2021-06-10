@@ -17,16 +17,6 @@ a {
     margin-top: 30px;
 }
 
-.header__title {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 42px;
-    color: #552fbc;
-    margin: 0;
-}
-
 .header__nav {
     list-style: none;
     padding-left: 0;
@@ -49,11 +39,27 @@ a {
 /* Constructor */
 
 .constructor-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.constructor__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #552fbc;
+    margin: 0;
+    align-self: center;
+}
+
+.constructor__wrapper {
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: 30px;
-    margin-right: 40px;
+    margin-top: 20px;
 }
 
 .form-constructor {
@@ -127,4 +133,24 @@ a {
 .list__link:hover,
 .list__link:active {
     color: #FAAD3D;
+}
+
+/* List doc */
+
+.list-page {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.list-page__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #552fbc;
+    margin: 0;
+    align-self: center;
 }
