@@ -4,10 +4,15 @@
         <div class="constructor__wrapper">
             <menu-component
             @addElem="addElem"
-            @deleteList="deleteList">       
+            @deleteDoc="deleteDoc"
+            @addDoc="saveDoc">       
             </menu-component>
             <form class="form-constructor" action="form-constructor">
-                <div class="form-group" v-for="(elem, index) in elems" :key="index">
+                <b-field label="Название">
+                    <b-input
+                    v-model="doc.docName"></b-input>
+                </b-field>
+                <div class="form-group" v-for="(elem, index) in doc.elems" :key="index">
                     <component
                     v-model="elem.value"
                     :is="elem.type">
@@ -27,6 +32,8 @@ import descInput from '../components/elemsComponents/descInput.vue';
 import codeInput from '../components/elemsComponents/codeInput.vue';
 import menuComponent from '../components/menuComponent.vue';
 
+import {mapActions} from 'vuex';
+
 export default {
     name: 'constructorPage',
     components: {
@@ -38,26 +45,36 @@ export default {
     },
     data() {
         return {
-            elems: [
-
-            ],
+            doc: {
+                docName: '',
+                elems: [
+                ],
+            },
         }
     },
     props: {
     },
     methods: {
         addElem(type) {
-            this.elems.push({
+            this.doc.elems.push({
                 type,
                 value: '',
             });
         },
         deleteElem(index) {
-            this.elems.splice(index, 1);
+            this.doc.elems.splice(index, 1);
         },
-        deleteList() {
-            this.elems = [];
+        deleteDoc() {
+            this.doc.elems = [];
+            this.doc.docName = '';
         },
+        saveDoc() {
+            this.addDoc(this.doc);
+            this.deleteDoc();
+        },
+        ...mapActions([
+            'addDoc',
+        ]),
     },
 }
 </script>

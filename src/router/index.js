@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import listPage from '../views/listPage.vue'
 import constructorPage from '../views/constructorPage.vue'
+import documentPage from '../views/documentPage.vue'
 
 
 Vue.use(VueRouter)
@@ -16,6 +17,12 @@ const routes = [
     path: '/constructor',
     name: 'constructorPage',
     component: constructorPage
+  },
+  {
+    path: '/document/:docName',
+    name: 'documentPage',
+    component: documentPage,
+    props: true,
   }
 ]
 

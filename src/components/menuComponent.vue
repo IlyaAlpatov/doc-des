@@ -29,11 +29,12 @@
                 <b-icon class="is-pulled-right" :icon="props.expanded ? 'menu-down' : 'menu-up'"></b-icon>
                 </template>
                 
-                <b-menu-item label="Сохранить">
+                <b-menu-item label="Сохранить"
+                @click="addDoc">
                 </b-menu-item>
 
                 <b-menu-item label="Удалить все элементы"
-                @click="deleteList()">
+                @click="deleteDoc">
                 </b-menu-item>
             </b-menu-item>
         </b-menu-list>
@@ -51,9 +52,12 @@ export default {
         addElem(type) {
             this.$emit('addElem', type);
         },
-        deleteList() {
-            this.$emit('deleteList');
-        }
+        deleteDoc() {
+            this.$emit('deleteDoc');
+        },
+        addDoc() {
+            this.$emit('addDoc');
+        },
     },
 }
 </script>

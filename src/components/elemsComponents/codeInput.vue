@@ -1,6 +1,6 @@
 <template>
     <b-field label="Код">
-        <b-input maxlength="200" type="textarea" v-model="innerValue"></b-input>
+        <b-input type="textarea" v-model="innerValue"></b-input>
     </b-field>
 </template>
 
