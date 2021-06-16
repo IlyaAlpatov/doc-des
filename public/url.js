@@ -1,0 +1,1 @@
+export let axiosUrl = 'http://localhost:3000';

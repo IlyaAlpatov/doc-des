@@ -1,5 +1,6 @@
 import axios from 'axios';
 import lodash from 'lodash';
+import {axiosUrl} from '../../../public/url';
 
 const state = () => ({
     docs: [],
@@ -17,7 +18,7 @@ const getters = {
 const actions = {
     async receiveDocs(ctx) {
         try {
-            let res = await axios.get('http://localhost:3000/docs');
+            let res = await axios.get(`${axiosUrl}/docs`);
             const docs = res.data;
             ctx.commit('updateDocs', docs);
         } catch (error) {
@@ -27,7 +28,7 @@ const actions = {
     async addDoc(ctx, doc) {
         try {
             let copiedDoc = lodash.cloneDeep(doc);
-            let res = await axios.post('http://localhost:3000/docs', copiedDoc);
+            let res = await axios.post(`${axiosUrl}/docs`, copiedDoc);
             console.log(res.status);
             ctx.commit('addDocInDocs', copiedDoc);
         } catch (error) {
